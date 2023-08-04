@@ -2,37 +2,43 @@ import { useState } from 'react'
 
 
 function App() {
-
-
-  return (
-    const [todos, setTodos] = useState([
+  const [todos, setTodos] = useState([
     {
       id:1,
       text:"criar funcionalidade x no sistema",
-      category:"trabalho"
+      category:"trabalho",
       isCompleted: false,
 
     },
     {
       id:2,
       text:"ir para a acdemia",
-      category:"pessoal"
+      category:"pessoal",
       isCompleted: false,
     },
     {
       id:3,
       text:"Estudar React",
-      category:"Estudo"
+      category:"Estudo",
       isCompleted: false,
     },
     ]
     )
 
 
-<div>
-    Olá React
+return <div className="app">
+   <h1>Lista de Tarefas</h1>
+   <div className='todo-lista'> 
+    {todos.map((todo) => (
+      <div className="todo">
+        <div className="content">
+          <p>{todo.text}</p>
+        </div>
+      </div>
+    ))}
+   </div>
 </div>;
-  )
+  
 }
 
-export default App
+export default App;
