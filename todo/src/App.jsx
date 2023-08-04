@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import './App.css';
+
 
 function App() {
   const [todos, setTodos] = useState([
@@ -33,6 +35,11 @@ return <div className="app">
       <div className="todo">
         <div className="content">
           <p>{todo.text}</p>
+          <p className='category'>{todo.category}</p>
+        </div>
+        <div className="botao">
+          <button>completar</button>
+          <button>X</button>
         </div>
       </div>
     ))}
